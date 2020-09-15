@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>MediaPlayer.js</title>
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+        <link rel="stylesheet" href="./assets/index.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Media Player js</h1>
+            <p>An extensible media player.</p>
+        </header>
+
+        <main class="container">
+            <video class="movie">
+                <source src="./assets/BigBuckBunny.mp4">
+            </video>
+
+            <button>Play/Pause</button>
+        </main>
+
+        <script>
+            //Aqui haremos las modificaciones del video
+            //a query selector hay que pasar un selector, un selector puede ser un video
+            const video = document.querySelector("video")
+            // pasamos el selector button
+            const button = document.querySelector("button")
+            
+            //funcion mediaPLayer
+            function MediaPLayer(config) {
+                this.media = config.el
+            }
+            
+            //funcion para reprodcuir o pausar el video
+            MediaPLayer.prototype.play = function() {
+                //estado de la reproduccion
+                let statusMedia = video.paused
+                //resultado true o false
+                console.log(statusMedia);
+                //condiciones para reproducir o pausar el video
+                (statusMedia)
+                    ? this.media.play()
+                    : this.media.pause()
+                
+            }
+            //ejecutamos el MediaPlayer
+            const player = new MediaPLayer({ el: video })
+            
+            // ejecutar el video con el boton 
+            button.onclick = () => player.play();
+             
+
+
+
+            
+        </script>
+    </body>
+</html>
