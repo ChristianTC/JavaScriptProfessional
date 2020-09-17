@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Scope</title>
+    </head>
+
+    <body>
+        <a href="/exercises/">Go Back</a>
+        <p><em>Abre la consola</em></p>
+
+        <script>
+            //Global Scope
+            //var message = "Hello world"
+            //var $ = function(message){
+            //    console.log('say ' + message);
+            //}
+
+            //function Scope
+            //function printNumbers() {
+            //    var i
+            //    for(var i = 0 ; i < 10; i++) {
+            //        function eventuallyPrintNumber(n) {
+            //            setTimeout( () => {
+            //                console.log(n);
+            //            }, 3000)
+            //        }
+            //        eventuallyPrintNumber(i)
+            //    }
+            //}
+//
+            //printNumbers()
+
+            //Block Scope
+            function printNumbers() {
+                for(let i = 0 ; i < 10; i++) {
+                    setTimeout( () => {
+                        console.log(i);
+                    }, 3000)
+                }
+            }
+
+            printNumbers()
+
+
+
+
+        </script>
+
+    </body>
+</html>
