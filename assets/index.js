@@ -7,7 +7,7 @@ const video = document.querySelector("video")
 
 //ejecutamos el MediaPlayer
 const player = new MediaPlayer({ el: video, plugins: [
-    //new AutoPlay()
+    new AutoPlay()
 ] })
 
 // pasamos el selector button
