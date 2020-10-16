@@ -1,5 +1,6 @@
 import MediaPlayer from './MediaPlayer.js'
 import AutoPlay from './plugins/AutoPlay.js'
+import AutoPause from './plugins/AutoPause.js'
 
 //Aqui haremos las modificaciones del video
 //a query selector hay que pasar un selector, un selector puede ser un video
@@ -7,7 +8,8 @@ const video = document.querySelector("video")
 
 //ejecutamos el MediaPlayer
 const player = new MediaPlayer({ el: video, plugins: [
-    new AutoPlay()
+    new AutoPlay(),
+    new AutoPause()
 ] })
 
 // pasamos el selector button
