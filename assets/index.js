@@ -21,3 +21,10 @@ button.onclick = () => player.tooglePlay();
 
 // Mute and unmute 
 buttonMute.onclick = () => player.toogleMute();
+
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').catch(error => {
+        console.log(error.message);
+    })
+}
